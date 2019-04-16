@@ -26,7 +26,7 @@ package_update <- function(x, id, url = get_default_url(),
                            key = get_default_key(), as = 'list', ...) {
 
   id <- as.ckan_package(id, url = url)
-  if (class(x) != "list") {
+  if (typeof(x) != "list") {
     stop("x must be of class list", call. = FALSE)
   }
   x$id <- id$id
